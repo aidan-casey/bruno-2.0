@@ -28,6 +28,6 @@ class BrunoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-    	$this->mergeConfigFrom(__DIR__ . '/config/bruno.php');
+    	$this->mergeConfigFrom(__DIR__ . '/config/bruno.php', 'bruno');
     }
 }
