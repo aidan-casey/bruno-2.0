@@ -15,7 +15,7 @@ class BrunoServiceProvider extends ServiceProvider
 	{
 		$this->publishes(
 			[
-				__DIR__ . '/config/bruno.php',
+				__DIR__ . '/config/bruno.php' => config_path('bruno.php'),
 			],
 			'config'
 		);
