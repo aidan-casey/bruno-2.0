@@ -8,6 +8,7 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Routing\Controller;
 use Illuminate\Routing\Router;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Config;
 use Optimus\Architect\Architect;
 use Illuminate\Http\Request;
 
@@ -145,13 +146,13 @@ abstract class LaravelController extends Controller
 
         // These are JSON requests that need to be parsed
         $includes = $this->parseIncludes(
-            json_decode($request->get('includes', $this->defaults['includes']), true)
+            json_decode($request->get(Config::get('bruno.parameters.includes'), $this->defaults['includes']), true)
         );
         $sort = $this->parseSort(
-            json_decode($request->get('sort', $this->defaults['sort']), true)
+            json_decode($request->get(Config::get('bruno.parameters.sort'), $this->defaults['sort']), true)
         );
         $filter_groups = $this->parseFilterGroups(
-            json_decode($request->get('filter_groups', $this->defaults['filter_groups']), true)
+            json_decode($request->get(Config::get('bruno.parameters.filter_groups'), $this->defaults['filter_groups']), true)
         );
 
         // These are just values to be passed on

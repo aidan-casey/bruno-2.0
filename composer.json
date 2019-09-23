@@ -5,6 +5,13 @@
             "Optimus\\Bruno\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Optimus\\Bruno\\BrunoServiceProvider"
+            ]
+        }
+    },
     "require": {
         "laravel/framework": "~6.0",
         "nscharrenberg/architect": "~2.0"
