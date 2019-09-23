@@ -1,5 +1,5 @@
 {
-    "name": "nscharrenberg/bruno",
+    "name": "aidan-casey/bruno",
     "autoload": {
         "psr-4": {
             "Optimus\\Bruno\\": "src/"
